@@ -1,16 +1,47 @@
-import ButtonGradient from "./assets/svg/ButtonGradient";
-import Header from "./components/Header";
+import styles from "./style";
+import {
+  Navbar,
+  Billing,
+  CardDeal,
+  Business,
+  Clients,
+  CTA,
+  Stats,
+  Footer,
+  Testimonials,
+  Hero,
+} from "./components";
 
-const App = () => {
-  return (
-    <>
-      <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden ">
-        <Header />
+const App = () => (
+  <>
+    <div className="bg-black w-full overflow-hidden">
+      <div className={`${styles.paddingX} ${styles.flexCenter}`}>
+        <div className={`${styles.boxWidth}`}>
+          <Navbar />
+        </div>
       </div>
 
-      <ButtonGradient />
-    </>
-  );
-};
+      <div className={`bg-black ${styles.flexStart}`}>
+        <div className={`${styles.boxWidth}`}>
+          <Hero />
+        </div>
+      </div>
+
+      {/* 各セクションを作成 */}
+      <div className={`bg-black ${styles.paddingX} ${styles.flexStart}`}>
+        <div className={`${styles.boxWidth}`}>
+          <Billing />
+          <CardDeal />
+          <Business />
+          <Clients />
+          <CTA />
+          <Stats />
+          <Footer />
+          <Testimonials />
+        </div>
+      </div>
+    </div>
+  </>
+);
 
 export default App;
