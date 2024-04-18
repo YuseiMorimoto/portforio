@@ -28,7 +28,7 @@ const App = () => (
       </div>
 
       {/* 各セクションを作成 */}
-      <div className={`bg-black ${styles.paddingX} ${styles.flexStart}`}>
+      <div className={`bg-black ${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
           <Stats />
           <Business />
